@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:38:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/14 12:13:38 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:50:13 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Cat::Cat(void) : Animal("Cat") {
     std::cout << YELLOW;
     std::cout << "Cat: Default constructor" << std::endl;
     std::cout << RESET;
-    
 };
+
 
 // copy constructor
 Cat::Cat(Cat &cat) {
@@ -31,9 +31,18 @@ Cat::Cat(Cat &cat) {
     this->type_ = cat.type_;
 };
 
+// Copy assignement operator
 
-
-
+Cat &Cat::operator=(Cat &cat) {
+    
+    std::cout << YELLOW;
+    std::cout << "Cat: copy assignement operator" << std::endl;
+    std::cout << RESET;
+    if (this != &cat) {
+        this->type_ = cat.type_;
+    }
+    return (*this);
+};
 
 // Destructor
 Cat::~Cat(void) {
@@ -44,11 +53,9 @@ Cat::~Cat(void) {
 };
 
 
-
-//Cat Sound Function
-void Cat::makesound(void) {
+ void Cat::makeSound(void) const{
 
     std::cout << YELLOW;    
-    std::cout << "Cat: speaks out \"Miaw Miaw\" " << std::endl;
+    std::cout << "Miaw Miaw"<< std::endl;
     std::cout << RESET;
 };

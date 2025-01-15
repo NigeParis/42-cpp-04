@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/14 12:15:16 by nrobinso         ###   ########.fr       */
+/*   Created: 2025/01/14 11:31:08 by nrobinso          #+#    #+#             */
+/*   Updated: 2025/01/15 12:40:45 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/Animal.hpp"
-#include "./include/Cat.hpp"
+#pragma once
+#ifndef CAT_HPP
+#define CAT_HPP
+
+#include "Animal.hpp"
+
+class Cat : virtual public Animal{
+
+    public:
+        Cat(void);
+        Cat(Cat &cat);
+        
+        Cat &operator=(Cat &cat);
+        
+        virtual ~Cat(void);
+
+        void makeSound(void) const;
 
 
-int main( void ) {
 
-    Cat animal;
-    Cat imal(animal);
-
+    private:
     
-    std::cout << "Animal: type= " << imal.getAnimalType() << std::endl;
-
-    imal.makesound();
-
-
-
-    return (0);
-}
+};
+#endif

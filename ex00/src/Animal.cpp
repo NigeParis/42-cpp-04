@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:14:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/14 12:06:07 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:49:12 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,20 @@ Animal::~Animal(void) {
     std::cout << RESET;
 };
 
-//get variables
-std::string Animal::getAnimalType(void) {
+// get variables
+std::string Animal::getType(void) const {
 
     return (this->type_);
 };
+
+
+
+ void Animal::makeSound(void) const{
+
+    std::cout << YELLOW;    
+    std::cout << "No sound is heard"<< std::endl;
+    std::cout << RESET;
+};
+
+
 

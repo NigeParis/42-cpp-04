@@ -16,7 +16,7 @@ CXX=c++
 
 
 SRC_DIR = src/
-SRC = main.cpp Animal.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ_DIR = build/
 
