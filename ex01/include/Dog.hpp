@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 10:16:08 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 12:40:53 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:40:50 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : virtual public Animal {
 
@@ -27,6 +28,6 @@ class Dog : virtual public Animal {
             
 
     private:
-        
+
 };
 #endif
