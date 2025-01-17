@@ -6,11 +6,39 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:20:34 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/16 14:32:39 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:16:09 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/Brain.hpp"
+
+
+std::string intToString(int nbr) {
+
+    std::string string;
+    
+    if (nbr < 0)
+        return ("Error");
+    if (nbr > 2147483647)
+        return ("Error");
+    if (nbr == 0)
+        string.push_back(0 + '0');
+   
+    while (nbr > 0) {
+
+        string.push_back(nbr%10 + '0');
+        nbr /= 10;
+        
+    } 
+    
+        while (string.) {
+        string.rbegin()
+
+        }   
+    return (string);   
+}
+
+
 
 
 // default constructor
@@ -18,8 +46,8 @@ Brain::Brain(void) {
     
     std::cout << "Brain: Default constructor" << std::endl;
     for(int i = 0; i < 100; i++) {
-        this->ideas_[i] = "My Idea_";
-        this->ideas_[i].push_back(i + '0');
+        std::string nbr = intToString(2147483647);
+        this->ideas_[i] = "My Idea_" + nbr;
     }
 };
 
