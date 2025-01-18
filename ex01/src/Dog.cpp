@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:16:40 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/18 11:53:45 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/18 17:36:25 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ Dog::Dog(void) : Animal("Dog") , brain_(new Brain()) {
 };
 
 // copy constructor
-Dog::Dog(Dog &dog) {
+Dog::Dog(Dog &dog) : brain_(new Brain()) {
 
-    std::cout << YELLOW;
+    std::cout << GREEN;    
     std::cout << "Dog: copy constructor" << std::endl;
     std::cout << RESET;
 
@@ -34,14 +34,12 @@ Dog::Dog(Dog &dog) {
 // Copy assignement operator
 Dog &Dog::operator=(Dog &dog) {
     
-    std::cout << YELLOW;
+    std::cout << GREEN;    
     std::cout << "Dog copy assignement operator" << std::endl;
     std::cout << RESET;
-    if (this == &dog) {
+    if (this != &dog) {
         this->type_ = dog.type_;
         this->brain_ = new Brain(*dog.brain_);
-        
-        
     }
     return (*this);
 };
@@ -49,22 +47,32 @@ Dog &Dog::operator=(Dog &dog) {
 // destructor
 Dog::~Dog(void) {
     
-    delete (this->brain_);
     std::cout << GREEN;    
+    std::cout << "Dog: Delete Dog Brain Destructor" << std::endl;
     std::cout << "Dog: Destructor" << std::endl;
     std::cout << RESET;
+    delete (this->brain_);
 };
 
 
 void Dog::makeSound(void) const{
 
-    std::cout << YELLOW;    
+    std::cout << GREEN;    
     std::cout << "Wouf Wouf"<< std::endl;
     std::cout << RESET;
 };
 
 std::string Dog::get_idea(int i) {
 
-    std::cout << "Dog::getBrainZ"<< std::endl;
+    std::cout << GREEN;    
+    std::cout << "Dog::get_idea: ";
     return (this->brain_->get_idea(i));
+};
+
+void Dog::new_idea(int i, std::string idea) {
+
+    std::cout << GREEN;    
+    std::cout << "Dog::new_idea: ";
+    this->brain_->new_idea(i, idea);
+    
 };

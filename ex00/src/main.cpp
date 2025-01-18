@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 16:45:50 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/18 17:03:00 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 int main( void ) {
 
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    const WrongAnimal* b = new WrongCat();
-    const WrongAnimal* x = new WrongCat();
+    const Animal *meta = new Animal();
+    const Animal *j = new Dog();
+    const Animal *i = new Cat();
+    const WrongAnimal *b = new WrongCat();
+    const WrongAnimal *x = new WrongCat();
   
     std::cout << j->getType() << " type in Dog class" << std::endl;
     std::cout << i->getType() << " type in Cat class" << std::endl;

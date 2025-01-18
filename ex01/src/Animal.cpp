@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:14:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 14:49:12 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/18 16:33:58 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,18 @@ Animal::Animal(std::string name) : type_(name) {
 // copy constructor
 Animal::Animal(Animal &animal) {
     
+    std::cout << RED;
     std::cout << "Animal: copy constructor" << std::endl;
+    std::cout << RESET;
     this->type_ = animal.type_;
 };
 
 // operator copy assignement
 Animal &Animal::operator=(Animal &animal) {
     
+    std::cout << RED;
     std::cout << "Animal: operator copy assignement" << std::endl;
+    std::cout << RESET;
     if (this != &animal)
         this->type_ = animal.type_;
     return (*this);
@@ -47,7 +51,7 @@ Animal &Animal::operator=(Animal &animal) {
 // destructor
 Animal::~Animal(void) {
 
-    std::cout << BLUE;
+    std::cout << RED;
     std::cout << "Animal: Destructor" << std::endl;    \
     std::cout << RESET;
 };
@@ -55,6 +59,9 @@ Animal::~Animal(void) {
 // get variables
 std::string Animal::getType(void) const {
 
+    std::cout << RED;
+    std::cout << "get Type of Animal: ";
+    std::cout << RESET;
     return (this->type_);
 };
 
