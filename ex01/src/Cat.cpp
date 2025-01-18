@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:38:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/16 16:45:33 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/18 11:50:31 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/Cat.hpp"
 
 // Default constructor
-Cat::Cat(void) : Animal("Cat"), brain_(new Brain) {
+Cat::Cat(void) : Animal("Cat"), brain_(new Brain()) {
 
     std::cout << YELLOW;
     std::cout << "Cat: Default constructor" << std::endl;
@@ -38,8 +38,9 @@ Cat &Cat::operator=(Cat &cat) {
     std::cout << YELLOW;
     std::cout << "Cat: copy assignement operator" << std::endl;
     std::cout << RESET;
-    if (this != &cat) {
+    if (this == &cat) {
         this->type_ = cat.type_;
+        this->brain_ = new Brain(*cat.brain_);
     }
     return (*this);
 };
@@ -47,7 +48,7 @@ Cat &Cat::operator=(Cat &cat) {
 // Destructor
 Cat::~Cat(void) {
     
-    delete (brain_);
+    delete (this->brain_);
     std::cout << YELLOW;    
     std::cout << "Cat: Destructor" << std::endl;
     std::cout << RESET;
@@ -61,8 +62,10 @@ void Cat::makeSound(void) const{
     std::cout << RESET;
 };
 
-std::string Cat::getBrain(int i) {
+
+
+std::string Cat::get_idea(int i) {
 
     std::cout << "Cat::getBrainZ"<< std::endl;
-    return (this->brain_->getIdea(i));
+    return (this->brain_->get_idea(i));
 };

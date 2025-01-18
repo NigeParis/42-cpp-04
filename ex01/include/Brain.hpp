@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:03:43 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/16 16:43:59 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/18 11:35:34 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ class Brain {
         Brain(void);
         Brain(Brain &brain);
         Brain &operator=(Brain &brain);
-        virtual ~Brain(void);
+        ~Brain(void);
 
-        virtual std::string getIdea(int i);
+        std::string get_idea(int i);
         
 
-    protected:
+    private:
 
         std::string ideas_[100];
 
