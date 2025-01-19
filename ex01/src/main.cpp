@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 15:13:42 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 15:17:39 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main( void ) {
     }
     
     {
-        std::cout << " ------------------------------- test2 -------------------------------" << std::endl;
+        std::cout << " -------------------------- SOME MORE TESTS -------------------------------" << std::endl;
         Dog *dog = new Dog();
         Dog *dog2 = new Dog(*dog);
         Cat *cat = new Cat();
@@ -99,7 +99,7 @@ int main( void ) {
             delete (animals[i]);
         }
 
-        std::cout << " ---------------------------- DEEP COPY TEST -------------------------" << std::endl;
+        std::cout << " ---------------------------- DEEP_COPY TEST -------------------------" << std::endl;
         
         const Dog *dog = new Dog();
 	    const Dog *dog2 = new Dog(*dog);
