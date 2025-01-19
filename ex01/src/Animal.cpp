@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:14:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/18 16:33:58 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 14:33:03 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal(void) : type_("unknown") {
 };
 
 // named constructor
-Animal::Animal(std::string name) : type_(name) {
+Animal::Animal(const std::string name) : type_(name) {
     
     std::cout << RED;
     std::cout << "Animal: named constructor" << std::endl;   
@@ -29,7 +29,7 @@ Animal::Animal(std::string name) : type_(name) {
 };
 
 // copy constructor
-Animal::Animal(Animal &animal) {
+Animal::Animal(const Animal &animal) {
     
     std::cout << RED;
     std::cout << "Animal: copy constructor" << std::endl;
@@ -38,7 +38,7 @@ Animal::Animal(Animal &animal) {
 };
 
 // operator copy assignement
-Animal &Animal::operator=(Animal &animal) {
+Animal &Animal::operator=(const Animal &animal) {
     
     std::cout << RED;
     std::cout << "Animal: operator copy assignement" << std::endl;

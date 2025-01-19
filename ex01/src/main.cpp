@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 13:14:32 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 15:13:42 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,17 @@ int main( void ) {
         std::cout << dog2->get_idea(3) << std::endl;
         
         dog = dog2;
-
+        
         std::cout << dog->get_idea(3) << std::endl;
         
-        delete (dog);
+        delete (dog2);
         delete (cat);
         delete (x);
         std::cout << " ------------------------- END -  Sound tests -----------------------" << std::endl;
     }
 
     {
-        std::cout << " ------------ START 50% objets Cat - 50%  objets Dog in animal ------" << std::endl;
+        std::cout << " ---- Constructor of  50% objets Cat - 50%  objets Dog in animal ----" << std::endl;
         
         Animal *animals[10];        
 
@@ -87,7 +87,7 @@ int main( void ) {
                 animals[i] = new Cat();
             }
         }
-        std::cout << " ------------------------- Sound tests 50 /50 --------------------------" << std::endl;
+        std::cout << " ------------------------- Sound tests 50 / 50 ----------------------" << std::endl;
         for (int i=0; i < 10; i++) {
             
             animals[i]->makeSound();
@@ -98,6 +98,18 @@ int main( void ) {
 
             delete (animals[i]);
         }
+
+        std::cout << " ---------------------------- DEEP COPY TEST -------------------------" << std::endl;
+        
+        const Dog *dog = new Dog();
+	    const Dog *dog2 = new Dog(*dog);
+	    delete dog;
+	    std::cout << "COPY DEEP RESULTS" << std::endl;
+	    std::cout << dog2->get_idea(0) << std::endl;
+        dog2->new_idea(0, "END OF TESTS");
+        std::cout << std::endl;
+	    std::cout << dog2->get_idea(0) << std::endl;
+	    delete dog2;
 
 
     }
