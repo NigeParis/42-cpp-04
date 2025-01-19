@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:14:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 16:17:37 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:55:46 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ WrongAnimal::WrongAnimal(void) : type_("unknown") {
 };
 
 // named constructor
-WrongAnimal::WrongAnimal(std::string name) : type_(name) {
+WrongAnimal::WrongAnimal(const std::string name) : type_(name) {
     
     std::cout << PINK;
     std::cout << "WrongAnimal: named constructor" << std::endl;   
@@ -29,7 +29,7 @@ WrongAnimal::WrongAnimal(std::string name) : type_(name) {
 };
 
 // copy constructor
-WrongAnimal::WrongAnimal(WrongAnimal &wronganimal) {
+WrongAnimal::WrongAnimal(const WrongAnimal &wronganimal) {
     
     std::cout << PINK;
     std::cout << "WrongAnimal: copy constructor" << std::endl;
@@ -38,7 +38,7 @@ WrongAnimal::WrongAnimal(WrongAnimal &wronganimal) {
 };
 
 // operator copy assignement
-WrongAnimal &WrongAnimal::operator=(WrongAnimal &wronganimal) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &wronganimal) {
     
     std::cout << PINK;
     std::cout << "WrongAnimal: operator copy assignement" << std::endl;

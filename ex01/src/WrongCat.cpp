@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:38:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 16:17:27 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:56:53 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,17 @@ WrongCat::WrongCat(void) : WrongAnimal("WrongCat") {
 };
 
 // copy constructor
-WrongCat::WrongCat(WrongCat &wrongcat) {
+WrongCat::WrongCat(const WrongCat &wrongcat) {
 
     std::cout << LIGHTBLUE;
     std::cout << "WrongCat: copy constructor" << std::endl;
     std::cout << RESET;
-
     this->type_ = wrongcat.type_;
 };
 
 // Copy assignement operator
 
-WrongCat &WrongCat::operator=(WrongCat &wrongcat) {
+WrongCat &WrongCat::operator=(const WrongCat &wrongcat) {
     
     std::cout << LIGHTBLUE;
     std::cout << "WrongCat: copy assignement operator" << std::endl;

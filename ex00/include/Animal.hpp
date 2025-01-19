@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:09:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 13:05:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:53:07 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,17 @@
 class Animal {
 
     public:
-
         Animal(void);
-        Animal(Animal &animal);
-        Animal(std::string name);
-        Animal &operator=(Animal &animal);
+        Animal(const Animal &animal);
+        Animal(const std::string name);
+        Animal &operator=(const Animal &animal);
         virtual ~Animal(void);
 
-
-        //get Animal type
+        //get Animal type or make animal sound
         std::string getType(void) const;
         virtual void makeSound(void) const;
 
     protected:
-
         std::string type_;    
 };
 

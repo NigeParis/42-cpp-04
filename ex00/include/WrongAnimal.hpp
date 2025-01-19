@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:09:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 13:27:04 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:55:11 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ class WrongAnimal {
     public:
 
         WrongAnimal(void);
-        WrongAnimal(WrongAnimal &animal);
-        WrongAnimal(std::string name);
-        WrongAnimal &operator=(WrongAnimal &wronganimal);
+        WrongAnimal(const WrongAnimal &animal);
+        WrongAnimal(const std::string name);
+        WrongAnimal &operator=(const WrongAnimal &wronganimal);
         virtual ~WrongAnimal(void);
 
 

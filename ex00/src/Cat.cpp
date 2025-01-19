@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:38:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 14:50:13 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:52:02 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cat::Cat(void) : Animal("Cat") {
 
 
 // copy constructor
-Cat::Cat(Cat &cat) {
+Cat::Cat(const Cat &cat) {
 
     std::cout << YELLOW;
     std::cout << "Cat: copy constructor" << std::endl;
@@ -33,7 +33,7 @@ Cat::Cat(Cat &cat) {
 
 // Copy assignement operator
 
-Cat &Cat::operator=(Cat &cat) {
+Cat &Cat::operator=(const Cat &cat) {
     
     std::cout << YELLOW;
     std::cout << "Cat: copy assignement operator" << std::endl;

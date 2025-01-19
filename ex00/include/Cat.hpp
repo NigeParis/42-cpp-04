@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:31:08 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/15 12:40:45 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:52:31 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,10 @@ class Cat : virtual public Animal{
 
     public:
         Cat(void);
-        Cat(Cat &cat);
-        
-        Cat &operator=(Cat &cat);
-        
+        Cat(const Cat &cat);
+        Cat &operator=(const Cat &cat);
         virtual ~Cat(void);
-
         void makeSound(void) const;
-
-
 
     private:
     

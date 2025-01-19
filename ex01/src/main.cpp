@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/18 17:41:00 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 12:20:37 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,37 @@ int main( void ) {
         delete (x);
         std::cout << " ------------------------- END -  Sound tests -----------------------" << std::endl;
     }
+
+    {
+        std::cout << " ------------ START 50% objets Cat - 50%  objets Dog in animal ------" << std::endl;
+        
+        Animal *animal[10];        
+
+        for (int i=0; i < 10; i++) {
+
+            if (i < 5) {
+                animal[i] = new Dog();
+            }
+            else {
+                animal[i] = new Cat();
+            }
+        }
+        std::cout << " ----------------------------- Sound tests --------------------------" << std::endl;
+        for (int i=0; i < 10; i++) {
+            
+            animal[i]->makeSound();
+        }
+        std::cout << " ----------------------- DESTRUCTION *[species] ---------------------" << std::endl;
+
+        for (int i=0; i < 10; i++) {
+
+            delete (animal[i]);
+        }
+
+
+    }
+
+
+    
     return (0);
 }
