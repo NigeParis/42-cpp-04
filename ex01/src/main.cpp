@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 12:20:37 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 13:14:32 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,22 @@ int main( void ) {
         x->makeSound();
         std::cout << " -------------------------- Dog test = test2 ------------------------" << std::endl;
       
-      
-      
-      
-      
-      
-        std::cout << " ----------------------- DESTRUCTION *[species] ---------------------" << std::endl;
         delete (dog);
+        
         std::cout << dog2->get_idea(3) << std::endl;
+        
         dog2->makeSound();
         dog2->new_idea(3, "Thinking of Cats");
-        std::cout << std::endl;
-        std::cout << dog2->get_idea(3) << std::endl;
-
         
-        delete (dog2);
+        std::cout << std::endl;
+        
+        std::cout << dog2->get_idea(3) << std::endl;
+        
+        dog = dog2;
+
+        std::cout << dog->get_idea(3) << std::endl;
+        
+        delete (dog);
         delete (cat);
         delete (x);
         std::cout << " ------------------------- END -  Sound tests -----------------------" << std::endl;
@@ -75,27 +76,27 @@ int main( void ) {
     {
         std::cout << " ------------ START 50% objets Cat - 50%  objets Dog in animal ------" << std::endl;
         
-        Animal *animal[10];        
+        Animal *animals[10];        
 
         for (int i=0; i < 10; i++) {
 
             if (i < 5) {
-                animal[i] = new Dog();
+                animals[i] = new Dog();
             }
             else {
-                animal[i] = new Cat();
+                animals[i] = new Cat();
             }
         }
-        std::cout << " ----------------------------- Sound tests --------------------------" << std::endl;
+        std::cout << " ------------------------- Sound tests 50 /50 --------------------------" << std::endl;
         for (int i=0; i < 10; i++) {
             
-            animal[i]->makeSound();
+            animals[i]->makeSound();
         }
         std::cout << " ----------------------- DESTRUCTION *[species] ---------------------" << std::endl;
 
         for (int i=0; i < 10; i++) {
 
-            delete (animal[i]);
+            delete (animals[i]);
         }
 
 
