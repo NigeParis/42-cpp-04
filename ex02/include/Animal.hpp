@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:09:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 14:32:39 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 16:55:11 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class Animal {
 
         //get Animal type
         std::string getType(void) const;
-        virtual void makeSound(void) const;
+        virtual void makeSound(void) const = 0;
 
     protected:
 

@@ -1,7 +1,7 @@
 ###############################################################################
 ## ARGUMENTS
 
-NAME= brain
+NAME= abstract
 CXXFLAGS=  -Wall -Wextra -Werror -std=c++98
 
 SRCS=$(addprefix $(SRC_DIR), $(SRC))
@@ -16,8 +16,8 @@ CXX=c++
 
 
 SRC_DIR = src/
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp 
+SRC += Brain.cpp
 OBJ_DIR = build/
 
 ###############################################################################
