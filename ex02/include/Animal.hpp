@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 10:09:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 15:20:56 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/19 14:32:39 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
 #include <string>
@@ -26,20 +26,20 @@
 #define PINK "\033[35m"
 #define RESET "\033[0m"
 
-class WrongAnimal {
+class Animal {
 
     public:
 
-        WrongAnimal(void);
-        WrongAnimal(const WrongAnimal &animal);
-        WrongAnimal(const std::string name);
-        WrongAnimal &operator=(const WrongAnimal &wronganimal);
-        virtual ~WrongAnimal(void);
+        Animal(void);
+        Animal(const Animal &animal);
+        Animal(const std::string name);
+        Animal &operator=(const Animal &animal);
+        virtual ~Animal(void);
 
 
-        //get WrongAnimal type
+        //get Animal type
         std::string getType(void) const;
-        void makeSound(void) const;
+        virtual void makeSound(void) const;
 
     protected:
 
