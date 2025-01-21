@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/21 16:18:46 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/21 17:05:26 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ Character::Character(Character &character) {
     std::cout << "Character: copy constructor" << std::endl;
           
 };
-
-
-
 
 
 Character::~Character(void) {

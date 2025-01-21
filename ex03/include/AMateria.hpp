@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:10:04 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/21 15:56:36 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/21 16:25:52 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ICharacter;
 class AMateria {
     protected:
         
-        std::string type;
+        std::string type_;
 
     public:
  
