@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:12:48 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/21 16:28:22 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:52:52 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ AMateria::AMateria(void): type_("default") {
 };
 
 
-AMateria::AMateria(AMateria const &amateria) {
+AMateria::AMateria(AMateria const &power) {
 
     std::cout << "AMateria: copy constructor" << std::endl;
-    this->type_ = amateria.type_;
+    this->type_ = power.type_;
     
 };
 
@@ -31,13 +31,13 @@ AMateria::AMateria(AMateria const &amateria) {
 
 
 
-AMateria &AMateria::operator=(AMateria const &amateria) {
+AMateria &AMateria::operator=(AMateria const &power) {
 
     std::cout << "AMateria: copy assignement" << std::endl;
 
-    if (this != &amateria) {
+    if (this != &power) {
         
-        this->type_ = amateria.type_;
+        this->type_ = power.type_;
     }
 
     return (*this);
@@ -48,5 +48,12 @@ AMateria &AMateria::operator=(AMateria const &amateria) {
 AMateria::~AMateria(void) {
 
     std::cout << "AMateria: default destructor" << std::endl;
+    
+};
+
+
+void AMateria::use(ICharacter& target) {
+
+    (void)target;
     
 };

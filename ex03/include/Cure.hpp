@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 12:03:09 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 10:41:01 by nrobinso         ###   ########.fr       */
+/*   Created: 2025/01/22 10:46:17 by nrobinso          #+#    #+#             */
+/*   Updated: 2025/01/22 14:34:07 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
 
-#include <string>
 #include "AMateria.hpp"
-class AMateria;             // important compile error " error: 'Character::equip' hides overloaded virtual function "
 
+class Cure: public AMateria { 
 
-class ICharacter 
-{
+    public :
+        
+        Cure(void);
+        Cure(Cure &cure);
+        Cure &operator=(Cure &cure);
+        ~Cure(void);
+        Cure clone(void);
 
-    public:
     
-        virtual ~ICharacter() {}
-        virtual std::string const & getName() const = 0;
-        virtual void equip(AMateria* m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter& target) = 0;
 };
-
 #endif

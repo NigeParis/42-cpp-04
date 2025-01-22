@@ -6,11 +6,10 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/21 17:03:43 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:22:14 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/AMateria.hpp"
 #include "../include/Character.hpp"
 #include "../include/ICharacter.hpp"
 
@@ -20,8 +19,8 @@ int main()
     // src->learnMateria(new Ice());
     // src->learnMateria(new Cure());
     
-    ICharacter* me = new Character("me");
-    AMateria* tmp;
+    // ICharacter* me = new Character("me");
+    // AMateria* tmp;
     
     // tmp = src->createMateria("ice");
     // me->equip(tmp);
@@ -32,8 +31,10 @@ int main()
     // me->use(0, *bob);
     // me->use(1, *bob);
     
+
+    
     delete bob;
-    delete me;
+    // delete me;
     // delete src;
     return 0;
 }
