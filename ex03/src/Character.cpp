@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 12:40:54 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:21:56 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ std::string const &Character::getName(void) const {
 
  void Character::unequip(int idx) {
     
-    (void) idx;
+    this->bin_[idx] = this->power_[idx];
+    this->power_[idx] = NULL;
 
  };
 

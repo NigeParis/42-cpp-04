@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 11:45:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:40:24 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Cure::Cure(void) {
     this->type_ = "cure";
 };
 
-Cure::Cure(Cure &cure) {
+Cure::Cure(const Cure &cure) {
     
     std::cout << "Cure: copy constructor" << std::endl;
     *this = cure;
 };
 
-Cure &Cure::operator=(Cure &cure) {
+Cure &Cure::operator=(const Cure &cure) {
     
     std::cout << "Cure: operator assignement" << std::endl;
     if (this != &cure) {
@@ -40,7 +40,7 @@ Cure::~Cure(void) {
 
 
 
-AMateria *Cure::clone(void) {
+AMateria *Cure::clone(void) const{
 
     std::cout << "Cure: clone called" << std::endl;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 15:17:39 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/23 16:30:23 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,12 @@ int main( void ) {
         std::cout << dog2->get_idea(3) << std::endl;
         
         dog2->makeSound();
-        dog2->new_idea(3, "Thinking of Cats");
-        
+        dog2->new_idea(-1, "Thinking of Cats");
         std::cout << std::endl;
+        std::cout << dog2->get_idea(3) << std::endl;
+        dog2->new_idea(3, "Thinking of Cats");
+        std::cout << std::endl;
+        
         
         std::cout << dog2->get_idea(3) << std::endl;
         

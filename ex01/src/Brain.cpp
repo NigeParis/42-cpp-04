@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:20:34 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 14:34:54 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/23 16:29:38 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,13 @@ std::string Brain::get_idea(const int i) {
     return(this->ideas_[i]);
 };
 
-void Brain::new_idea(const int i, const std::string idea) {
+void Brain::new_idea(const int i, const std::string& idea) {
 
+    if (i < 0 || i > 99) {  
+    
+        std::cout << "Error: Brain:: No idea :";
+        return ;
+    }
     std::cout << GREEN;    
     std::cout << "Brain::new_idea: ";
     this->ideas_[i] = idea;
