@@ -1,49 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 11:45:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 12:30:08 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cure.hpp"
+#include "../include/Ice.hpp"
 
-Cure::Cure(void) {
+Ice::Ice(void) {
     
-    std::cout << "Cure: default destructor" << std::endl;
-    this->type_ = "cure";
+    std::cout << "Ice: default destructor" << std::endl;
+    this->type_ = "ice";
 };
 
-Cure::Cure(Cure &cure) {
+Ice::Ice(Ice &Ice) {
     
-    std::cout << "Cure: copy constructor" << std::endl;
-    *this = cure;
+    std::cout << "ice: copy constructor" << std::endl;
+    *this = Ice;
 };
 
-Cure &Cure::operator=(Cure &cure) {
+Ice &Ice::operator=(Ice &Ice) {
     
-    std::cout << "Cure: operator assignement" << std::endl;
-    if (this != &cure) {
+    std::cout << "Ice: operator assignement" << std::endl;
+    if (this != &Ice) {
         
-        this->type_ = cure.type_;
+        this->type_ = Ice.type_;
     }
     return(*this); 
 };
         
-Cure::~Cure(void) {
-    std::cout << "Cure: default destructor" << std::endl;
+Ice::~Ice(void) {
+    std::cout << "Ice: default destructor" << std::endl;
 };
 
 
+AMateria *Ice::clone(void) {
 
-AMateria *Cure::clone(void) {
-
-    std::cout << "Cure: clone called" << std::endl;
-
-    return (new Cure(*this));  
+    std::cout << "Ice: clone called" << std::endl;
+    return (new Ice(*this));  
 };
 

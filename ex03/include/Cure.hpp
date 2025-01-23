@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 10:46:17 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 14:34:07 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 11:32:25 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "AMateria.hpp"
 
-class Cure: public AMateria { 
+class Cure: virtual public AMateria { 
 
     public :
         
@@ -24,7 +24,7 @@ class Cure: public AMateria {
         Cure(Cure &cure);
         Cure &operator=(Cure &cure);
         ~Cure(void);
-        Cure clone(void);
+        AMateria *clone(void);
 
     
 };

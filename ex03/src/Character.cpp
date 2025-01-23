@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 14:11:16 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 12:40:54 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void Character::equip(AMateria *power) {
     std::cout << "Character: equip function" << std::endl;
     this->power_[0] = power;
     
+    std::cout << "Character: Debug: " << this->power_[0] << std::endl;
 };
 
 
