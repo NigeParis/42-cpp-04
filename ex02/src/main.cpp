@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/19 17:08:08 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/23 16:39:19 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int main( void ) {
         
         std::cout << dog2->get_idea(3) << std::endl;
         
+        std::cout << " -------------------------TEST   dog = dog2; -----------------------" << std::endl;
         dog = dog2;
         
         std::cout << dog->get_idea(3) << std::endl;
