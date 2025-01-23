@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 12:30:08 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:54:13 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Ice::Ice(void) {
     this->type_ = "ice";
 };
 
-Ice::Ice(Ice &Ice) {
+Ice::Ice(const Ice &Ice) {
     
     std::cout << "ice: copy constructor" << std::endl;
     *this = Ice;
 };
 
-Ice &Ice::operator=(Ice &Ice) {
+Ice &Ice::operator=(const Ice &Ice) {
     
     std::cout << "Ice: operator assignement" << std::endl;
     if (this != &Ice) {
@@ -39,9 +39,11 @@ Ice::~Ice(void) {
 };
 
 
-AMateria *Ice::clone(void) {
+AMateria *Ice::clone(void) const{
 
     std::cout << "Ice: clone called" << std::endl;
-    return (new Ice(*this));  
+    Ice *Address;
+    Address = new Ice(*this);  
+    return (Address);  
 };
 

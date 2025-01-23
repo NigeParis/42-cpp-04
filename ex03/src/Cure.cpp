@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 15:40:24 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:54:31 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,11 @@ Cure::~Cure(void) {
     std::cout << "Cure: default destructor" << std::endl;
 };
 
-
-
 AMateria *Cure::clone(void) const{
 
     std::cout << "Cure: clone called" << std::endl;
-
-    return (new Cure(*this));  
+    Cure *Address;
+    Address = new Cure(*this);  
+    return (Address);  
 };
 

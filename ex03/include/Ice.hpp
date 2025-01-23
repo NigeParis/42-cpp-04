@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 10:46:17 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 12:28:40 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:54:03 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class Ice: virtual public AMateria {
     public :
         
         Ice(void);
-        Ice(Ice &ice);
-        Ice &operator=(Ice &ice);
+        Ice(const Ice &ice);
+        Ice &operator=(const Ice &ice);
         ~Ice(void);
         
-        AMateria *clone(void);
+        AMateria *clone(void) const;
     
 };
 #endif
