@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 10:37:35 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 15:21:28 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/24 08:13:54 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,16 @@
 
 #include "IMateriaSource.hpp"
 #include "AMateria.hpp"
-#include "Cure.hpp"
+#include  "Cure.hpp"
+#include  "Ice.hpp"
 
 #include <string>
 class AMateria;
+class Cure;
+class Ice;
 
 class MateriaSource : virtual public IMateriaSource {
 
-    private:
-    
-        AMateria *amateria_[4];
-    
     public:
     
         MateriaSource(void);
@@ -35,6 +34,10 @@ class MateriaSource : virtual public IMateriaSource {
         ~MateriaSource(void);
         void learnMateria(AMateria*);
         AMateria* createMateria(std::string const & type);
+
+    private:
+    
+        AMateria *amateria_[4];
 };
 
 

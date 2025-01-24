@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:10:04 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/21 16:25:52 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/24 11:41:14 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class AMateria {
 
     public:
  
+        AMateria(std::string const & type);
         AMateria(void);
         AMateria(AMateria const &amateria);
         
@@ -36,8 +37,6 @@ class AMateria {
         virtual ~AMateria(void);
 
  
-        AMateria(std::string const & type);
-        //[...]
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);

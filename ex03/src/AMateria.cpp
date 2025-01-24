@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:12:48 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 12:52:52 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/24 11:44:39 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ AMateria::AMateria(AMateria const &power) {
     
 };
 
+AMateria::AMateria(std::string const & type) {
 
+    std::cout << "AMateria: named type constructor" << std::endl;
+    this->type_ = type;    
+};
 
 
 
@@ -50,6 +54,14 @@ AMateria::~AMateria(void) {
     std::cout << "AMateria: default destructor" << std::endl;
     
 };
+
+std::string const &AMateria::getType(void) const{
+
+    std::cout << "AMateria: getType called" << std::endl;
+    return(this->type_);
+    
+};
+
 
 
 void AMateria::use(ICharacter& target) {

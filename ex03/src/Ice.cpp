@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 16:54:13 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/24 08:10:16 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ Ice::Ice(const Ice &Ice) {
     *this = Ice;
 };
 
-Ice &Ice::operator=(const Ice &Ice) {
+Ice &Ice::operator=(const Ice &ice) {
     
     std::cout << "Ice: operator assignement" << std::endl;
-    if (this != &Ice) {
+    if (this != &ice) {
         
-        this->type_ = Ice.type_;
+        this->type_ = ice.type_;
     }
     return(*this); 
 };

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:03:09 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 12:53:23 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/24 11:25:07 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 #include <string>
 #include "ICharacter.hpp"
+#define BAGSIZE 4
+#define BINSIZE 400
+
+
 
 
 class Character : virtual public ICharacter {
@@ -23,8 +27,8 @@ class Character : virtual public ICharacter {
     private:
         
         std::string name_;
-        AMateria *power_[4];
-        AMateria *bin_[400];
+        AMateria *power_[BAGSIZE];
+        AMateria *bin_[BINSIZE];
         
 
     public:
