@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:00:38 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 14:23:15 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
     bob->equip(tmp);
     bob->unequip(0);
     
-    me->use(1, *bob);
+    me->use(3, *bob);
     
     delete bob;
     delete me;
