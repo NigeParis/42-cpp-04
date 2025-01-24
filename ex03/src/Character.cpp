@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 11:36:02 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 14:03:35 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ Character::~Character(void) {
 
 void Character::equip(AMateria *power) {
 
-    std::cout << "Character: equip function" << std::endl;
+    std::cout << "Character: equip function";
     if (power == NULL)
         return ;
     for (int i = 0; i < BAGSIZE; i++) {
@@ -102,7 +102,7 @@ void Character::equip(AMateria *power) {
 
 std::string const &Character::getName(void) const {
 
-    std::cout << "Character: equip function" << std::endl;
+    std::cout << "Character: getName called :";
     return (this->name_);
 };
 
@@ -133,5 +133,8 @@ void Character::use(int idx, ICharacter& target) {
     (void) idx;
     (void) target;
     
+    std::cout << "Character: " << this->name_ << " adds equip " << target.getName()  << std::endl;       
+    
+    //this->power_[idx]->use(target);
     
 };

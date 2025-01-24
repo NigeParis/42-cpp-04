@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 11:24:05 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 14:00:38 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
     // src->learnMateria(new Ice());
     src->learnMateria(new Cure());
     
-    // ICharacter* me = new Character("me");
+    ICharacter* me = new Character("me");
     AMateria* tmp = NULL;
     
     // tmp = src->createMateria("ice");
@@ -32,16 +32,16 @@ int main()
     
     ICharacter* bob = new Character("bob");
     // me->use(0, *bob);
-    // me->use(1, *bob);
     
     // bob->equip(tmp);
     std::cout << bob->getName() << std::endl;
     bob->equip(tmp);
     bob->unequip(0);
     
+    me->use(1, *bob);
     
     delete bob;
-    // delete me;
+    delete me;
     // delete src;
     return 0;
 }
