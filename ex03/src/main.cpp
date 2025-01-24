@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:23:15 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 17:18:09 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,27 @@
 
 int main()
 {
-    IMateriaSource* src = new MateriaSource();
-    // src->learnMateria(new Ice());
+    
+    IMateriaSource* src = new MateriaSource(); 
+    src->learnMateria(new Ice()); 
     src->learnMateria(new Cure());
     
     ICharacter* me = new Character("me");
-    AMateria* tmp = NULL;
     
-    // tmp = src->createMateria("ice");
-    // me->equip(tmp);
+    AMateria* tmp;
+    tmp = src->createMateria("ice");
+    me->equip(tmp);
     tmp = src->createMateria("cure");
-    // me->equip(tmp);
+    me->equip(tmp);
     
-    ICharacter* bob = new Character("bob");
-    // me->use(0, *bob);
+    ICharacter* bob = new Character("bob"); 
     
-    // bob->equip(tmp);
-    std::cout << bob->getName() << std::endl;
-    bob->equip(tmp);
-    bob->unequip(0);
+    me->use(0, *bob);
+    me->use(1, *bob);
     
-    me->use(3, *bob);
-    
-    delete bob;
-    delete me;
-    // delete src;
+    delete bob; 
+    delete me; 
+    delete src;
+
     return 0;
 }

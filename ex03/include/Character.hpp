@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:03:09 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 11:25:07 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 14:28:07 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 #include <string>
 #include "ICharacter.hpp"
-#define BAGSIZE 4
-#define BINSIZE 400
+#include "AMateria.hpp"
 
 
 

@@ -16,7 +16,7 @@ CXX=c++
 
 
 SRC_DIR = src/
-SRC = main.cpp AMateria.cpp Character.cpp MateriaSource.cpp Cure.cpp
+SRC = main.cpp AMateria.cpp Character.cpp MateriaSource.cpp Cure.cpp Ice.cpp
 OBJ_DIR = build/
 
 ###############################################################################

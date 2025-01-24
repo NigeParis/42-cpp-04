@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:10:04 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 13:43:24 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 14:27:35 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 #include <iostream>
 #include <string>
 #include "ICharacter.hpp"
+
+#define BAGSIZE 4
+#define BINSIZE 400
 
 class ICharacter;
 
