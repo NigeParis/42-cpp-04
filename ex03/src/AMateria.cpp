@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:12:48 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:24:18 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 17:36:27 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,11 @@ void AMateria::use(ICharacter& target) {
     switch (whichPower(this->type_)) {
     
         case 1:
-            std::cout << "* shoots an ice bolt at " << target.getName() << std::endl; 
+            std::cout << "* shoots an ice bolt at " << target.getName() << std::endl;
+            break ; 
         case 2:
             std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+            break ;
         case 0:
             std::cout << "Error: Type_ unknown" << std::endl;         
     }

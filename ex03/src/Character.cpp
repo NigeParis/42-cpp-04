@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:23:48 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/24 17:34:42 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void Character::equip(AMateria *power) {
             return ;
         } else {
 
-            if ((this->power_[i] != power) && this->power_[i] != NULL) {
+            if (this->power_[i] == NULL) {
                 
                 this->power_[i] = power;
                 std::cout << "Character Added power: " << power->getType() << "index : " << i << std::endl;
