@@ -6,7 +6,7 @@
 /*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 17:34:42 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/25 12:07:51 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Character::Character(void): name_("default") {
 
-    std::cout << "Character: default constructor" << std::endl;
+    //std::cout << "Character: default constructor" << std::endl;
     for (int i = 0; i < BINSIZE; i++)
         this->bin_[i] = NULL;
     for (int i = 0; i < BAGSIZE; i++)
@@ -25,7 +25,7 @@ Character::Character(void): name_("default") {
 
 Character::Character(std::string name): name_(name) {
 
-    std::cout << "Character: named constructor" << std::endl;
+    //std::cout << "Character: named constructor" << std::endl;
     for (int i = 0; i < BINSIZE; i++)
         this->bin_[i] = NULL;
     for (int i = 0; i < BAGSIZE; i++)
@@ -35,13 +35,13 @@ Character::Character(std::string name): name_(name) {
 
 Character::Character(Character &character) {
 
-    std::cout << "Character: copy constructor" << std::endl;
+    //std::cout << "Character: copy constructor" << std::endl;
     *this = character;          
 };
 
 Character &Character::operator=(Character &character) {
 
-    std::cout << "Character: operator assignement" << std::endl;
+    //std::cout << "Character: operator assignement" << std::endl;
     if (this != &character) { 
         this->name_ = character.name_;
         for (int i = 0; i < BAGSIZE; i++) {
@@ -61,7 +61,7 @@ Character &Character::operator=(Character &character) {
 
 Character::~Character(void) {
 
-    std::cout << "Character: default destructor" << std::endl;
+    //std::cout << "Character: default destructor" << std::endl;
 
     for (int i = 0; i < BINSIZE; i++) {
         if (this->bin_[i] != NULL)
@@ -77,7 +77,7 @@ Character::~Character(void) {
 
 void Character::equip(AMateria *power) {
 
-    std::cout << "Character: equip function" << std::endl;
+    //std::cout << "Character: equip function" << std::endl;
     if (power == NULL)
         return ;
     for (int i = 0; i < BAGSIZE; i++) {
@@ -89,12 +89,12 @@ void Character::equip(AMateria *power) {
             if (this->power_[i] == NULL) {
                 
                 this->power_[i] = power;
-                std::cout << "Character Added power: " << power->getType() << "index : " << i << std::endl;
+                //std::cout << "Character Added power: " << power->getType() << " index : " << i << std::endl;
                 return ;
             }
         }
     }
-    std::cout << "Character: equipements sac full !" << std::endl;
+    std::cout << "Character: equipements sac is full !" << std::endl;
     delete (power);
     
 };
@@ -102,7 +102,7 @@ void Character::equip(AMateria *power) {
 
 std::string const &Character::getName(void) const {
 
-    std::cout << "Character: getName called :";
+    //std::cout << "Character: getName called :";
     return (this->name_);
 };
 
@@ -123,7 +123,7 @@ std::string const &Character::getName(void) const {
                 break ;   
             }
         }
-        std::cout << "Character: " << this->name_ << "adds equip " << power_[idx]->getType() << std::endl;       
+        std::cout << "Character: " << this->name_ << " puts equip " << power_[idx]->getType() << " in the bin !" << std::endl;       
         this->power_[idx] = NULL;
     }
  };
@@ -131,12 +131,12 @@ std::string const &Character::getName(void) const {
 void Character::use(int idx, ICharacter& target) {
 
     if (idx < 0 || idx >= BAGSIZE) {
-        std::cout << "Character: Error: Scope index wrong" << std::endl;
+        std::cout << "Character: Error index: bag capacity wrong" << std::endl;
         return ;
     }
     if (this->power_[idx] == NULL) {
-        std::cout << "Character: " << this->getName() << " tries to use a power thats not there" << std::endl;
-        std::cout << "Character: target name: " << target.getName()  << std::endl;       
+        std::cout << "Character: " << this->getName() << " trys to use a power that's not in his bag" << std::endl;
+        std::cout << "Character: the target name was: " << target.getName()  << std::endl;       
         return ; 
     };
     this->power_[idx]->use(target);

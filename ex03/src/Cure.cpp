@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 16:54:31 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/25 11:11:14 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Cure::Cure(void) {
     
-    std::cout << "Cure: default destructor" << std::endl;
+    //std::cout << "Cure: default destructor" << std::endl;
     this->type_ = "cure";
 };
 
 Cure::Cure(const Cure &cure) {
     
-    std::cout << "Cure: copy constructor" << std::endl;
+   // std::cout << "Cure: copy constructor" << std::endl;
     *this = cure;
 };
 
 Cure &Cure::operator=(const Cure &cure) {
     
-    std::cout << "Cure: operator assignement" << std::endl;
+   // std::cout << "Cure: operator assignement" << std::endl;
     if (this != &cure) {
         
         this->type_ = cure.type_;
@@ -35,12 +35,13 @@ Cure &Cure::operator=(const Cure &cure) {
 };
         
 Cure::~Cure(void) {
-    std::cout << "Cure: default destructor" << std::endl;
+
+    //std::cout << "Cure: default destructor" << std::endl;
 };
 
 AMateria *Cure::clone(void) const{
 
-    std::cout << "Cure: clone called" << std::endl;
+    //std::cout << "Cure: clone called" << std::endl;
     Cure *Address;
     Address = new Cure(*this);  
     return (Address);  
