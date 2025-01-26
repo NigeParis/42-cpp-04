@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/25 12:07:51 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/26 10:51:56 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,20 +81,16 @@ void Character::equip(AMateria *power) {
     if (power == NULL)
         return ;
     for (int i = 0; i < BAGSIZE; i++) {
-        if (this->power_[i] == power) {
-            std::cout << "Character: equip already exists" << std::endl;
-            return ;
-        } else {
-
-            if (this->power_[i] == NULL) {
+        
+        if (this->power_[i] == NULL) {
                 
-                this->power_[i] = power;
-                //std::cout << "Character Added power: " << power->getType() << " index : " << i << std::endl;
-                return ;
-            }
+            this->power_[i] = power;
+            //std::cout << "Character Added power: " << power->getType() << " index : " << i << std::endl;
+            return ;
         }
     }
-    std::cout << "Character: equipements sac is full !" << std::endl;
+    
+    std::cout << "Character: " << this->getName() <<": equipements sac is full !" << std::endl;
     delete (power);
     
 };
@@ -110,11 +106,13 @@ std::string const &Character::getName(void) const {
  void Character::unequip(int idx) {
 
     if (idx < 0 || idx >= BAGSIZE) {
-        std::cout << "Character: Error: Scope index wrong" << std::endl;
+        std::cout << "Character: " << this->getName() << " Error: Scope index wrong" << std::endl;
         return ;
     }    
-    if ((this->power_[idx] == NULL) || (this->bin_[399]) != NULL) {
-        std::cout << "Character: unequip - nothing to do, bin full or no power" << std::endl;        
+    if (this->power_[idx] == NULL) {
+        std::cout << "Character: " << this->getName() << " unequip - nothing to do, power not found" << std::endl;  
+    } else if (this->bin_[BINSIZE - 1] != NULL) {
+        std::cout << "Character: " << this->getName() << " unequip - nothing to do, bin full" << std::endl;  
     } else {
 
         for (int i = 0; i < BINSIZE; i++) {
@@ -123,7 +121,7 @@ std::string const &Character::getName(void) const {
                 break ;   
             }
         }
-        std::cout << "Character: " << this->name_ << " puts equip " << power_[idx]->getType() << " in the bin !" << std::endl;       
+        std::cout << "Character: " << this->name_ << " puts power " << power_[idx]->getType() << " in the bin !" << std::endl;       
         this->power_[idx] = NULL;
     }
  };
@@ -135,8 +133,8 @@ void Character::use(int idx, ICharacter& target) {
         return ;
     }
     if (this->power_[idx] == NULL) {
-        std::cout << "Character: " << this->getName() << " trys to use a power that's not in his bag" << std::endl;
-        std::cout << "Character: the target name was: " << target.getName()  << std::endl;       
+        std::cout << "Character: " << this->getName() << " trys to use a power that's not in his bag";
+        std::cout << ", the target name was: " << target.getName()  << std::endl;       
         return ; 
     };
     this->power_[idx]->use(target);

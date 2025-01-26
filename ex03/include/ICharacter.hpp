@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:03:09 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/22 10:41:01 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/26 10:58:09 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 #include <string>
 #include "AMateria.hpp"
-class AMateria;             // important compile error " error: 'Character::equip' hides overloaded virtual function "
 
+class AMateria;             // important compile error " error: 'Character::equip' hides overloaded virtual function "
 
 class ICharacter 
 {

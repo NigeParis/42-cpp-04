@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 10:37:35 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 16:56:42 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/26 10:58:31 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,5 @@ class MateriaSource : virtual public IMateriaSource {
     
         AMateria *amateria_[4];
 };
-
 
 #endif

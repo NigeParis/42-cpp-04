@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 10:46:17 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/23 15:40:33 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/26 10:55:57 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ class Cure: virtual public AMateria {
         Cure(const Cure &cure);
         Cure &operator=(const Cure &cure);
         ~Cure(void);
-        AMateria *clone(void) const;
-
-    
+        AMateria *clone(void) const;    
 };
 #endif

@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:10:04 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:27:35 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/26 10:57:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #pragma once
 #ifndef AMATERIA_HPP
@@ -25,9 +24,6 @@
 class ICharacter;
 
 class AMateria {
-    protected:
-        
-        std::string type_;
 
     public:
  
@@ -43,6 +39,11 @@ class AMateria {
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
+    
+    protected:
+        
+        std::string type_;
+
 };
 
 int whichPower(const std::string& type);

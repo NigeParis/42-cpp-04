@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:03:09 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/24 14:28:07 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/26 10:56:56 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,7 @@
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-
-
-
 class Character : virtual public ICharacter {
-
-    private:
-        
-        std::string name_;
-        AMateria *power_[BAGSIZE];
-        AMateria *bin_[BINSIZE];
-        
 
     public:
     
@@ -42,6 +32,13 @@ class Character : virtual public ICharacter {
         void equip(AMateria *m);
         void unequip(int idx);
         void use(int idx, ICharacter& target); // ice.attaque()
+    
+    private:
+        
+        std::string name_;
+        AMateria *power_[BAGSIZE];
+        AMateria *bin_[BINSIZE];
+
 };
 
 #endif
