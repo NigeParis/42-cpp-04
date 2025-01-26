@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nige42 <nige42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/25 11:11:14 by nige42           ###   ########.fr       */
+/*   Updated: 2025/01/26 11:02:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ AMateria *Cure::clone(void) const{
     Address = new Cure(*this);  
     return (Address);  
 };
-
