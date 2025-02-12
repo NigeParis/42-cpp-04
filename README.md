@@ -45,3 +45,78 @@ int main() {
     delete animal;
     return 0;
 }
+```
+ex01: Creation of Deep Copies of Classes
+
+Deep copying involves creating a new object that is a copy of an existing object, including all dynamically allocated memory.
+
+Example:
+
+```c
+#include <iostream>
+#include <cstring>
+
+class String {
+private:
+    char* str;
+public:
+    String(const char* s) {
+        str = new char[strlen(s) + 1];
+        strcpy(str, s);
+    }
+
+    String(const String& other) {
+        str = new char[strlen(other.str) + 1];
+        strcpy(str, other.str);
+    }
+
+    ~String() {
+        delete[] str;
+    }
+
+    void print() const {
+        std::cout << str << std::endl;
+    }
+};
+
+int main() {
+    String hello("Hello");
+    String copy = hello;
+    copy.print(); // Output: Hello
+    return 0;
+}
+```
+ex02: Introduction of the Abstract Class
+
+Abstract classes serve as blueprints for derived classes and contain pure virtual functions.
+
+Example:
+
+```c
+#include <iostream>
+
+class Shape {
+public:
+    virtual double area() const = 0; // Pure virtual function
+};
+
+class Circle : public Shape {
+private:
+    double radius;
+public:
+    Circle(double r) : radius(r) {}
+    double area() const override {
+        return 3.14159 * radius * radius;
+    }
+};
+
+int main() {
+    Shape* shape = new Circle(5.0);
+    std::cout << "Area: " << shape->area() << std::endl; // Output: Area: 78.5398
+    delete shape;
+    return 0;
+}
+```
+
+
+
